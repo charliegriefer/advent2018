@@ -12,12 +12,14 @@ def part_one(ids):
     repeat_2 = set()
     repeat_3 = set()
     for id in ids:
-        for letter in string.ascii_letters:
+        for letter in string.ascii_lowercase:
             result = id.count(letter)
             if result is 2:
                 repeat_2.add(id)
             if result is 3:
                 repeat_3.add(id)
+    for q in repeat_3:
+        print(q)
     return len(repeat_2) * len(repeat_3) 
 
 
